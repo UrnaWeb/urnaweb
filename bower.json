@@ -1,0 +1,29 @@
+{
+  "name": "UrnaWeb",
+  "version": "0.0.0",
+  "authors": [
+    "Kaue Miyauti Machado <kaumac@gmail.com>"
+  ],
+  "description": "UrnaWeb Web Platform",
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "angular": "~1.2.23",
+    "angular-resource": "~1.2.23",
+    "angular-cookies": "~1.2.23",
+    "angular-sanitize": "~1.2.23",
+    "angular-ui-router": "~0.2.11",
+    "angular-animate": "~1.2.23",
+    "firebase": "~1.0.24",
+    "angularfire": "~0.8.2",
+    "firebase-simple-login": "~1.6.4"
+  }
+}
