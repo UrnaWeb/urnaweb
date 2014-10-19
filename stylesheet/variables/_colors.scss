@@ -1,0 +1,37 @@
+// ==============================================================================================
+// Primary color
+// ==============================================================================================
+$primaryColor: rgba(219, 247, 215, 1.0);
+$primaryColorHover: darken($primaryColor, 4%);
+// ==============================================================================================
+// Secundary color
+// ==============================================================================================
+$strongerPrimaryColor: rgba(104, 173, 94, 1.0);
+
+$featuredPrimaryColor: rgba(146, 233, 134, 1.0);
+
+
+$complementColor: rgba(34, 49, 63, 1.0);
+$complementColor: rgba(44, 62, 80, 1.0);
+$complementColor: rgba(53, 63, 79, 1.0);
+
+$outlineColor: rgba(204, 204, 204, 1.0);
+
+$mainBackgroundColor: lighten($complementColor, 75%);
+
+
+$paragraphColor: lighten($complementColor, 25%);
+$linkColor: $primaryColor;
+
+// Behavior colors
+$successColor: rgba(128, 190, 48, 1.0);
+$warningColor: rgba(255, 180, 0, 1.0);
+$errorColor: rgba(193, 55, 55, 1.0);
+
+// 3rd party color swatches
+$facebookPrimaryColor: rgba(59, 89, 152, 1.0);
+$facebookPrimaryColorHover: darken($facebookPrimaryColor, 4%);
+$twitterPrimaryColor: rgba(40, 185, 221, 1.0);
+$twitterPrimaryColorHover: darken(rgba(40, 185, 221, 1.0), 5%);
+$googlePrimaryColor: rgba(221, 76, 57, 1.0);
+$googlePrimaryColorHover: darken(rgba(221, 76, 57, 1.0), 5%);

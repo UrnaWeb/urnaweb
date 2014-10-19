@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="hospedou">
+<html ng-app="UrnaWeb">
 <head>
   <title>Urna Web: Eleições 2014</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -9,7 +9,7 @@
   <!-- endbuild -->
 </head>
 <body>
-  <div ui-view style="height: 100%;"></div>
+  <div ui-view style="height: 100%;overflow: auto;"></div>
   <script src="https://fontastic.s3.amazonaws.com/tScWU4rNJxMp64a3DTGBmB/icons.js"></script>
   <!-- build:js application.js -->
   <!-- bower vendor assets -->
@@ -23,25 +23,18 @@
   <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="/bower_components/angular-animate/angular-animate.js"></script>
-  <script src="/bower_components/angular-translate/angular-translate.js"></script>
-  <script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
   <!-- the application -->
   <script src="/javascript/google_fonts.js"></script>
   <!-- the application -->
   <script src="/javascript/application.js"></script>
   <!-- application services -->
-  <script src="/javascript/services/prompt_service.js"></script>
   <script src="/javascript/services/auth_service.js"></script>
   <script src="/javascript/services/user_service.js"></script>
+  <script src="/javascript/services/vote_service.js"></script>
   <!-- application controllers -->
-  <script src="/javascript/controllers/transitions_controller.js"></script>
-  <script src="/javascript/controllers/public/public_controller.js"></script>
-  <script src="/javascript/controllers/public/sign_in_controller.js"></script>
-  <script src="/javascript/controllers/public/sign_up_controller.js"></script>
-  <script src="/javascript/controllers/application/application_controller.js"></script>
-  <script src="/javascript/controllers/application/dashboard_controller.js"></script>
-  <script src="/javascript/controllers/application/guests_controller.js"></script>
-  <script src="/javascript/controllers/manage/guest/guest_preferences_controller.js"></script>
+  <script src="/javascript/transitions_controller.js"></script>
+  <script src="/javascript/application_controller.js"></script>
+  <script src="/javascript/vote_controller.js"></script>
   <!-- endbuild -->
 </body>
 </html>

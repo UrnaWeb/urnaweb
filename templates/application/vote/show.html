@@ -1,0 +1,13 @@
+<button ng-click="vote('13')">Votar Dilma</button>
+<button ng-click="vote('45')">Votar Aécio</button>
+<button ng-click="vote('none')">Branco / Nulo</button>
+<input type="radio" ng-model="vote_data.party" value="45">Aécio<br/>
+<input type="radio" ng-model="vote_data.party" value="13">Dilma<br/>
+<input type="radio" ng-model="vote_data.party" value="none">Branco/Nulo<br/>
+{{vote_data.party}}
+
+<input type="radio" ng-model="vote_data.visible" value="true">Visivel<br/>
+<input type="radio" ng-model="vote_data.visible" value="false">Não visivel<br/>
+{{vote_data.visible}}
+
+<button class="button" ng-click="set_vote({party: vote_data.party, visible: vote_data.visible })">Votar</button>

@@ -1,0 +1,26 @@
+p {
+  font-size: 1.2rem;
+  color: $paragraphColor;
+  color: #666;
+  line-height: 1.5;
+}
+
+em {
+  @extend p;
+  color: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 700;
+}
+
+a {
+  @extend p;
+  cursor: pointer;
+  color: $linkColor;
+  border-bottom: 1px dotted $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($linkColor, 5%);
+  }
+}

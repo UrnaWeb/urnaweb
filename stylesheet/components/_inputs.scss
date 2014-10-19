@@ -1,0 +1,27 @@
+#{$all-text-inputs} {
+  @include transition(all 0.5s);
+  background-color: rgba(255, 255, 255, 1.0);
+  border: none;
+  box-shadow: inset 0 0 0 1px $outlineColor;
+  text-shadow: none;
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-align: left;
+  padding: 2rem 3rem;
+  color: #333;
+  outline: none;
+  line-height: 18px;
+  height: auto;
+}
+
+input:-webkit-autofill {
+  box-shadow: inset 0 0 0 1px #DDD, 0 0 0px 1000px rgba(255, 255, 255, 1.0) inset;
+}
+
+@include placeholder {
+  color: #AAA;
+}
+
+#{$all-text-inputs-focus} {
+  box-shadow: inset 0 0 0 1px $primaryColor;
+}

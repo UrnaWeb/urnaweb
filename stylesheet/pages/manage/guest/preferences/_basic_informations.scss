@@ -1,0 +1,44 @@
+.preference-category {
+  @extend .application-row;
+  margin-bottom: 160px;
+  display: block;
+  &:first-child {
+    margin-top: 160px;
+  }
+
+  .category-help {
+    @include span-columns(12);
+    padding: 0 5%;
+    height: 100%;
+
+    .help-title {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  .category-options {
+    @include span-columns(12);
+    padding: 0 5%;
+
+    .category-option {
+      @include span-columns(12 of 12);
+      margin-bottom: 40px;
+
+      &#first_name,
+      &#last_name {
+        @include span-columns(6 of 12);
+      }
+
+      &#last_name {
+        margin-right: 0;
+      }
+    }
+
+    .category-options-group {
+      @include span-columns(12 of 12);
+      .category-option {
+        @include span-columns(6 of 12);
+      }
+    }
+  }
+}

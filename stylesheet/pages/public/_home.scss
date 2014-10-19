@@ -1,0 +1,29 @@
+#home-intro {
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+
+  .intro-header {
+    margin-bottom: 3rem;
+
+    .intro-title {
+      font-weight: 700;
+      color: $featuredPrimaryColor;
+      margin: 0;
+    }
+    .intro-subtitle {
+      margin: 0;
+    }
+  }
+}
+
+#home-illustration {
+  @extend %horizontal-align;
+  width: 80%;
+  max-width: 60rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 60%;
+  }
+}

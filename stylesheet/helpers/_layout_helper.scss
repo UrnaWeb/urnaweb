@@ -1,0 +1,35 @@
+html,body {
+  height: 100%;
+  font-family: $defaultFontFamily;
+  font-size: 10px;
+  overflow: hidden;
+
+  @media screen and (min-width: 480px) {
+    font-size: 11px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 11px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 14px;
+  }
+}
+
+.application-row {
+  @include outer-container;
+}
+
+.application-full-row {
+  @extend .application-row;
+  max-width: 100%;
+}

@@ -1,0 +1,138 @@
+.login-area-container,
+.sign-up-area-container {
+  background: $mainBackgroundColor;
+  width: 100%;
+  height: 100%;
+
+  .login-box,
+  .sign-up-box {
+    @extend %vertical-align;
+    @include outer-container;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 520px;
+
+    .alternative-message {
+      @include span-columns(24);
+      margin-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .provider-separator-container {
+      @include span-columns(24);
+      text-align: center;
+      margin: 40px 0 20px;
+      .provider-separator {
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        background-color: rgba(255, 255, 255, 1.0);
+        box-shadow: inset 0 0 0 1px #CCC;
+        font-size: 1.2rem;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+    }
+
+    .sign-up-message,
+    .login-message {
+      @include span-columns(24);
+      margin-top: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .login-content,
+    .sign-up-content {
+      .login-with-email,
+      .login-with-social,
+      .sign-up-with-email,
+      .sign-up-with-social {
+        @include span-columns(24);
+        @include omega(1n);
+      }
+      .login-with-social,
+      .sign-up-with-social {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        box-shadow: 0 0 0 20px #FFF, 0 0 0 21px #CCC;
+        background: #FFF;
+
+        .social-provider {
+          @include span-columns(12 of 24);
+          display: block;
+
+          .button {
+            width: 100%;
+          }
+        }
+      }
+      .login-with-email,
+      .sign-up-with-email {
+
+        #email-field,
+        #password-field,
+        #password-confirmation-field {
+          @include span-columns(24 of 24);
+          margin-bottom: 20px;
+        }
+        #sign-up-button {
+          @include span-columns(24 of 24);
+        }
+        #first-name-field,
+        #last-name-field {
+          @include span-columns(12 of 24);
+          @include omega(2n);
+          margin-bottom: 20px;
+        }
+        #login-button {
+          @include span-columns(10 of 24);
+        }
+        .login-complement {
+          @include span-columns(14 of 24);
+        }
+        .login-complement {
+          .recover-password-link {
+            float: left;
+            margin: 12px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.welcome-content {
+  margin-bottom: 20px;
+  float: left;
+
+  .welcome-message{
+    @include span-columns(24);
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+}
+
+.welcome-action {
+  @include span-columns(24);
+  background-color: rgba(0,0,0,0.01);
+  border: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+
+  .action-message  {
+    padding: 30px;
+    margin: 0 0 30px 0;
+    background-color: rgba(255, 255, 255, 1.0);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .action-button  {
+    margin-bottom: 30px;
+  }
+}
