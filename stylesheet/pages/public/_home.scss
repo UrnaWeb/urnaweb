@@ -15,15 +15,56 @@
       margin: 0;
     }
   }
+
+  .intro-description {
+    width: 90%;
+    max-width: 84rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
 }
 
 #home-illustration {
-  @extend %horizontal-align;
   width: 80%;
-  max-width: 60rem;
+  max-width: 54rem;
   margin: 0 auto;
+}
 
-  @media screen and (min-width: 480px) {
-    width: 60%;
+.call-to-action {
+  width: 100%;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+#vote-steps {
+  @extend .application-row;
+  width: 100%;
+  margin: 8rem 0;
+
+  .step {
+    @include span-columns(24);
+    padding: 2rem;
+    text-align: left;
+
+    .step-icon {
+      @include span-columns(6 of 24);
+      text-align: center;
+      padding: 0 2rem;
+
+      svg {
+        path {
+          fill: #888;
+        }
+      }
+    }
+
+    .step-content {
+      @include span-columns(18 of 24);
+
+      .step-title {
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 }

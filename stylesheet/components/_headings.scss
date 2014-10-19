@@ -1,18 +1,20 @@
 h1,h2,h3,h4,h5 {
   font-family: $featuredFontFamily;
   font-weight: 400;
-  color: $strongerPrimaryColor;
   text-transform: uppercase;
 }
 
 h1 {
   font-size: 5rem;
+  color: $strongerPrimaryColor;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
+  color: #888;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.8rem;
+  color: #888;
 }
