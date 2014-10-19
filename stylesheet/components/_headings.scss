@@ -2,19 +2,19 @@ h1,h2,h3,h4,h5 {
   font-family: $featuredFontFamily;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
+  color: $strongerPrimaryColor;
 }
 
 h1 {
   font-size: 5rem;
-  color: $strongerPrimaryColor;
+  color: $featuredPrimaryColor;
 }
 
 h2 {
   font-size: 2.4rem;
-  color: #888;
 }
 
 h3 {
   font-size: 1.8rem;
-  color: #888;
 }

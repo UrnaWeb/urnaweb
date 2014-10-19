@@ -1,4 +1,53 @@
-<button ng-click="vote('13')">Votar Dilma</button>
+<section>
+  <header class="centered-page-title">
+    <h1>
+      Em quem você pretende votar?
+    </h1>
+  </header>
+  <article class="candidate-options">
+    <div class="vote-candidate dilma">
+      <div class="candidate-images">
+        <img class="candidate-photo" src="images/dilma-thumb.png" alt="Votar na candidata Dilma">
+        <img class="candidate-illustration" src="images/dilminha.png" alt="Votar na candidata Dilma">
+      </div>
+      <hgroup>
+        <h1 class="candidate-name">
+          Dilma Rouseff
+        </h1>
+        <h2 class="candidate-party">
+          Partido dos Trabalhadores (PT - 13)
+        </h2>
+      </hgroup>
+      <button class="button vote">
+        Votar
+      </button>
+    </div>
+    <div class="vote-candidate aecio">
+      <div class="candidate-images">
+        <img class="candidate-photo" src="images/aecio-thumb.png" alt="Votar no candidato Aécio">
+        <img class="candidate-illustration" src="images/aeciozinho.png" alt="Votar no candidato Aécio">
+      </div>
+      <hgroup>
+        <h1 class="candidate-name">
+          Aécio Neves
+        </h1>
+        <h2 class="candidate-party">
+          Partido da Social Democracia Brasileira (PSDB - 45)
+        </h2>
+      </hgroup>
+      <button class="button vote">
+        Votar
+      </button>
+    </div>
+    <div class="vote-alternative">
+      <button class="button">
+        Votarei "branco" ou "nulo"
+      </button>
+    </div>
+  </article>
+</section>
+
+<!-- <button ng-click="vote('13')">Votar Dilma</button>
 <button ng-click="vote('45')">Votar Aécio</button>
 <button ng-click="vote('none')">Branco / Nulo</button>
 <input type="radio" ng-model="vote_data.party" value="45">Aécio<br/>
@@ -10,4 +59,4 @@
 <input type="radio" ng-model="vote_data.visible" value="false">Não visivel<br/>
 {{vote_data.visible}}
 
-<button class="button" ng-click="set_vote({party: vote_data.party, visible: vote_data.visible })">Votar</button>
+<button class="button" ng-click="set_vote({party: vote_data.party, visible: vote_data.visible })">Votar</button> -->

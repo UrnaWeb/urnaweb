@@ -1,18 +1,12 @@
 #home-intro {
   width: 100%;
   text-align: center;
-  padding: 3rem;
+  padding: 2rem;
 
   .intro-header {
-    margin-bottom: 3rem;
-
+    margin-bottom: 2rem;
     .intro-title {
       font-weight: 700;
-      color: $featuredPrimaryColor;
-      margin: 0;
-    }
-    .intro-subtitle {
-      margin: 0;
     }
   }
 
@@ -20,7 +14,7 @@
     width: 90%;
     max-width: 84rem;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding-top: 2rem;
   }
 }
 
@@ -39,7 +33,7 @@
 #vote-steps {
   @extend .application-row;
   width: 100%;
-  margin: 8rem 0;
+  margin: 4rem 0;
 
   .step {
     @include span-columns(24);

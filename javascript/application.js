@@ -18,7 +18,6 @@ angular.module('UrnaWeb', ['firebase','ngCookies','ngResource','ngSanitize','ngA
     })
       .state('application.home', {
         url: '/',
-        controller: 'HomeController',
         templateUrl: 'templates/application/home/show.html'
       })
       .state('application.vote', {

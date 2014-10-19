@@ -19,10 +19,8 @@
 
 @import "modules/header";
 @import "modules/footer";
-
-@import "pages/public/home";
-@import "pages/public/sign_in";
-@import "pages/public/sign_up";
-@import "pages/manage/guest/preferences/basic_informations";
+@import "modules/centered-page-title";
 
 @import "pages/application/show";
+@import "pages/application/home/show";
+@import "pages/application/vote/show";

@@ -1,0 +1,10 @@
+.centered-page-title {
+  @extend .application-row;
+  line-height: 3rem;
+  text-align: center;
+  padding: 1.5rem;
+
+  h1 {
+    font-size: 3rem;
+  }
+}
