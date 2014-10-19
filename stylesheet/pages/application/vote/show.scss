@@ -1,0 +1,152 @@
+.candidate-options {
+  @extend .application-row;
+
+  .candidate-option {
+    width: 50%;
+    float: left;
+    text-align: center;
+
+    .vote {
+      width: 20rem;
+      margin-bottom: 4rem;
+      max-width: 80%;
+    }
+  }
+  #candidate-pt {
+    .candidate-images {
+      .candidate-photo {
+        box-shadow: 0 0 0 0.8rem #FFF, 0 0 0 0.9rem #F22613;
+      }
+      .candidate-illustration {
+        right: -1rem;
+      }
+    }
+  }
+  #candidate-psdb {
+    box-shadow: -1px 0 0 0 #CCC;
+    .candidate-images {
+      .candidate-photo {
+        box-shadow: 0 0 0 0.8rem #FFF, 0 0 0 0.9rem #446CB3;
+      }
+      .candidate-illustration {
+        left: -1rem;
+      }
+    }
+  }
+
+  .candidate-name {
+    @media screen and (max-width: 620px) {
+      height: 8rem;
+    }
+    @media screen and (max-width: 420px) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+  }
+
+  .candidate-party {
+    @media screen and (max-width: 1110px) {
+      height: 4rem;
+    }
+    @media screen and (max-width: 610px) {
+      height: 6rem;
+    }
+    @media screen and (max-width: 420px) {
+      height: 8rem;
+      margin-top: 0;
+    }
+  }
+
+  .vote-alternative {
+    padding: 2rem 5%;
+    float: left;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -1px 0 0 #CCC;
+  }
+}
+
+#vote-confirmation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 100;
+
+  #confirmation-content {
+    border-radius: 1rem;
+    width: 38rem;
+    max-width: 90%;
+    height: 50rem;
+    max-height: 96%;
+    display: block;
+    background-color: #FFF;
+    box-shadow: 0 0 5rem 0 rgba(0,0,0,0.5);
+    @extend %center-align;
+
+    .confirmation-title {
+      width: 100%;
+      line-height: 2.4rem;
+      padding: 1rem 2rem;
+      font-size: 1.8rem;
+      text-align: center;
+      box-shadow: 0 1px 0 0 #CCC;
+    }
+
+    .confirmation-subtitle {
+      width: 100%;
+      line-height: 1.8rem;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      text-align: center;
+      color: #888;
+      // font-family: $defaultFontFamily;
+      text-transform: none;
+      font-weight: 700;
+    }
+
+    .confirmation-subtitle {
+
+    }
+
+  }
+}
+
+#confirmation-candidate-info {
+  .vote-candidate {
+    padding: 2rem;
+    .candidate-images {
+      width: 10rem;
+    }
+    .candidate-name {
+      margin-top: 2rem;
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+    .candidate-party {
+      margin-top: 0;
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+
+    &.pt {
+      .candidate-photo {
+        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem #F22613;
+      }
+      .candidate-illustration {
+        right: -1rem;
+      }
+    }
+
+    &.psdb {
+      .candidate-photo {
+        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.9rem #446CB3;
+      }
+      .candidate-illustration {
+        right: -1rem;
+      }
+    }
+  }
+}
