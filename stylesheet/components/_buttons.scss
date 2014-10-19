@@ -17,4 +17,9 @@
   &:hover {
     background-color: $primaryColorHover;
   }
+
+  @media screen and (max-width: 420px) {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
 }

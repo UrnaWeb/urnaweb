@@ -11,6 +11,7 @@
 @import "helpers/layout_helper";
 @import "helpers/vertical_align";
 @import "helpers/horizontal_align";
+@import "helpers/center_align";
 
 @import "components/paragraphs";
 @import "components/headings";
@@ -19,6 +20,7 @@
 
 @import "modules/header";
 @import "modules/footer";
+@import "modules/vote-candidate";
 @import "modules/centered-page-title";
 
 @import "pages/application/show";

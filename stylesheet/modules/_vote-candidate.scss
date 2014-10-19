@@ -1,0 +1,42 @@
+.vote-candidate {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 3rem 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem 0;
+  }
+
+  .candidate-images {
+    width: 20rem;
+    max-width: 75%;
+    display: inline-block;
+    position: relative;
+    .candidate-photo {
+      width: 100%;
+      border-radius: 100%;
+    }
+    .candidate-illustration {
+      width: 35%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .candidate-name {
+    color: #444;
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+  }
+
+  .candidate-party {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #888;
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+}

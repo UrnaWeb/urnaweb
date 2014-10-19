@@ -5,46 +5,38 @@
     </h1>
   </header>
   <article class="candidate-options">
-    <div class="vote-candidate dilma">
-      <div class="candidate-images">
-        <img class="candidate-photo" src="images/dilma-thumb.png" alt="Votar na candidata Dilma">
-        <img class="candidate-illustration" src="images/dilminha.png" alt="Votar na candidata Dilma">
-      </div>
-      <hgroup>
-        <h1 class="candidate-name">
-          Dilma Rouseff
-        </h1>
-        <h2 class="candidate-party">
-          Partido dos Trabalhadores (PT - 13)
-        </h2>
-      </hgroup>
-      <button class="button vote">
+    <div class="candidate-option" id="candidate-pt">
+      <div ng-include="'templates/application/partials/candidates/pt.html'"></div>
+      <button ng-click="confirm_vote('pt')" class="button vote">
         Votar
       </button>
     </div>
-    <div class="vote-candidate aecio">
-      <div class="candidate-images">
-        <img class="candidate-photo" src="images/aecio-thumb.png" alt="Votar no candidato Aécio">
-        <img class="candidate-illustration" src="images/aeciozinho.png" alt="Votar no candidato Aécio">
-      </div>
-      <hgroup>
-        <h1 class="candidate-name">
-          Aécio Neves
-        </h1>
-        <h2 class="candidate-party">
-          Partido da Social Democracia Brasileira (PSDB - 45)
-        </h2>
-      </hgroup>
-      <button class="button vote">
+    <div class="candidate-option" id="candidate-psdb">
+      <div ng-include="'templates/application/partials/candidates/psdb.html'"></div>
+      <button ng-click="confirm_vote('pt')" class="button vote">
         Votar
       </button>
     </div>
     <div class="vote-alternative">
-      <button class="button">
-        Votarei "branco" ou "nulo"
+      <button ng-click="confirm_vote('none')" class="button">
+        Votarei "<em>branco</em>" ou "<em>nulo</em>"
       </button>
     </div>
   </article>
+</section>
+
+<section id="vote-confirmation" ng-show="show_confirmation">
+  <div id="confirmation-content">
+    <hgroup>
+      <h1 class="confirmation-title">
+        Confirmação de voto
+      </h1>
+      <h2 class="confirmation-subtitle">
+        Deseja realmente votar em:
+      </h2>
+    </hgroup>
+    <div ng-include="'templates/application/partials/candidates/' + vote.party + '.html'" id="confirmation-candidate-info"></div>
+  </div>
 </section>
 
 <!-- <button ng-click="vote('13')">Votar Dilma</button>
