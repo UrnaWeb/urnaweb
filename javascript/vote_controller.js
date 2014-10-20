@@ -2,7 +2,7 @@
 
 angular.module('UrnaWeb').controller('VoteController', function($scope, $state, Vote, User, Auth) {
   $scope.vote = {
-    public_vote: false
+    is_private: false
   };
   $scope.confirm_vote = function(party) {
     $scope.show_confirmation = true;
@@ -17,7 +17,7 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
         $scope.$on("$firebaseSimpleLogin:login", function(e, user) {
           $scope.set_vote = Vote.set({
             party: $scope.vote.party,
-            visible: $scope.vote.public_vote
+            is_private: $scope.vote.is_private
           }, function() {
             $state.transitionTo('application.results');
           });
@@ -25,7 +25,7 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
       } else {
         $scope.set_vote = Vote.set({
           party: $scope.vote.party,
-          visible: $scope.vote.public_vote
+          is_private: $scope.vote.is_private
         }, function() {
           alert('votou');
         });
@@ -42,7 +42,7 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
   }
 
   $scope.cancel_vote = function() {
-    $scope.vote = {public_vote: false};
+    $scope.vote = {is_private: false};
     $scope.show_confirmation = false;
   }
 });

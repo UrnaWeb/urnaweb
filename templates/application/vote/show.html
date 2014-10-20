@@ -38,11 +38,11 @@
     <div ng-include="'templates/application/partials/candidates/' + vote.party + '.html'" id="confirmation-candidate-info"></div>
 
     <div class="confirmation-actions">
-      <label for="public_vote" class="check-public-vote">
+      <label for="is_private" class="check-public-vote">
         <p class="label-text">
           Quero meu voto privado
         </p>
-        <input type="checkbox" name="public_vote" ng-model="vote.public_vote" id="public_vote">
+        <input type="checkbox" name="is_private" ng-model="vote.is_private" id="is_private">
       </label>
       <div class="action">
         <button class="button" ng-click="submit_vote()">
