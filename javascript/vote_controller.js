@@ -14,14 +14,14 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
     User.get_auth_payload().then(function(user) {
       if(user === null) {
         $scope.login_required = true;
-        $scope.$on("$firebaseSimpleLogin:login", function(e, user) {
-          $scope.set_vote = Vote.set({
-            party: $scope.vote.party,
-            is_private: $scope.vote.is_private
-          }, function() {
-            $state.transitionTo('application.results');
-          });
-        });
+        // $scope.$on("$firebaseSimpleLogin:login", function(e, user) {
+        //   $scope.set_vote = Vote.set({
+        //     party: $scope.vote.party,
+        //     is_private: $scope.vote.is_private
+        //   }, function() {
+        //     $state.transitionTo('application.results');
+        //   });
+        // });
       } else {
         $scope.set_vote = Vote.set({
           party: $scope.vote.party,
@@ -34,7 +34,14 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
   }
 
   $scope.login = function() {
-    Auth.login();
+    Auth.login(function() {
+      $scope.set_vote = Vote.set({
+        party: $scope.vote.party,
+        is_private: $scope.vote.is_private
+      }, function() {
+        $state.transitionTo('application.results');
+      });
+    });
   }
 
   $scope.logout = function() {

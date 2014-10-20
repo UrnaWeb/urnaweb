@@ -8,7 +8,7 @@ angular.module('UrnaWeb').factory('Auth', function(FIREBASE_URL, $firebaseSimple
     signedIn: function () {
       return simpleLogin.user !== null;
     },
-    login: function () {
+    login: function (callback) {
       simpleLogin.$login("facebook", {scope: facebookLoginScope}).then(function(userData) {
         firebaseReference.child('users').child(userData.uid).once('value', function(snapshot) {
           if(snapshot.val() !== null) {
@@ -24,6 +24,9 @@ angular.module('UrnaWeb').factory('Auth', function(FIREBASE_URL, $firebaseSimple
             });
           };
         });
+        if(callback) {
+          callback();
+        }
       }, function(error) {
         console.error("Login failed: " + error);
       })
