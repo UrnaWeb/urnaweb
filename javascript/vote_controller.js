@@ -25,6 +25,10 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
     Auth.login();
   }
 
+  $scope.logout = function() {
+    Auth.logout();
+  }
+
   $scope.cancel_vote = function() {
     $scope.vote = {};
     $scope.show_confirmation = false;

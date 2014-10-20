@@ -147,6 +147,13 @@
       z-index: 10;
       background-color: #FFF;
       display: block;
+
+      .login-content {
+        @extend %vertical-align;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+      }
     }
 
   }

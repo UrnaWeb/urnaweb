@@ -27,7 +27,7 @@
 
 <section id="vote-confirmation" ng-show="show_confirmation">
   <div id="confirmation-content">
-    <hgroup>
+    <hgroup ng-click="logout()">
       <h1 class="confirmation-title">
         Confirmação de voto
       </h1>
@@ -57,9 +57,19 @@
     </div>
 
     <div class="facebook-login" ng-show="login_required">
-      <button class="facebook-button" ng-click="login()">
-        Entrar com facebook
-      </button>
+      <div class="login-content">
+        <h2 class="login-title">
+          Concluir
+        </h2>
+        <p class="login-message">
+          Para registrar seu voto você precisa entrar com sua conta do Facebook.
+
+          Não se preocupe, as informações são usadas apenas para garantir que cada pessoa é elegível a voto e vota uma única vez.
+        </p>
+        <button class="facebook-button" ng-click="login()">
+          Entrar com facebook
+        </button>
+      </div>
     </div>
   </div>
 </section>
