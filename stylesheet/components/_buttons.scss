@@ -23,3 +23,12 @@
     padding: 1rem 2rem;
   }
 }
+
+.facebook-button {
+  @extend .button;
+  background-color: $facebookPrimaryColor;
+  color: rgba(255, 255, 255, 1.0);
+  &:hover {
+    background-color: $facebookPrimaryColorHover;
+  }
+}
