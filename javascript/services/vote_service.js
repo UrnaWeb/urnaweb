@@ -1,5 +1,5 @@
 'use strict';
-angular.module('UrnaWeb').factory('Vote', function(FIREBASE_URL, $q, $firebaseSimpleLogin, $rootScope, $state) {
+angular.module('UrnaWeb').factory('Vote', function(FIREBASE_URL, $q, $firebase, $firebaseSimpleLogin, $rootScope, $state) {
   var firebaseReference = new Firebase(FIREBASE_URL);
   var simpleLogin = $firebaseSimpleLogin(firebaseReference);
 
@@ -20,7 +20,13 @@ angular.module('UrnaWeb').factory('Vote', function(FIREBASE_URL, $q, $firebaseSi
           callback();
         }
       });
+    },
+    total: function () {
+      var deferred = $q.defer();
+      deferred.resolve($firebase(firebaseReference.child('counts')).$asObject());
+      return deferred.promise;
     }
+
   };
 
   return Vote;

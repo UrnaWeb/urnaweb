@@ -22,6 +22,11 @@ angular.module('UrnaWeb', ['firebase','ngCookies','ngResource','ngSanitize','ngA
       })
       .state('application.vote', {
         url: '/votar',
+        resolve: {
+          totalVotes: function(Vote) {
+            return Vote.total();
+          }
+        },
         controller: 'VoteController',
         templateUrl: 'templates/application/vote/show.html'
       })

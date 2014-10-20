@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('UrnaWeb').controller('VoteController', function($scope, $state, Vote, User, Auth) {
+angular.module('UrnaWeb').controller('VoteController', function($scope, $state, Vote, User, Auth, totalVotes) {
   $scope.vote = {
     is_private: false
   };
@@ -45,4 +45,10 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
     $scope.vote = {is_private: false};
     $scope.show_confirmation = false;
   }
+
+  // $scope.total_votes = totalVotes;
+  Vote.total().then(function(something){
+    $scope.total_votes = something;
+  });
+  // console.log(totalVotes);
 });
