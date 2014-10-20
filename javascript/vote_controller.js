@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('UrnaWeb').controller('VoteController', function($scope, $state, Vote, User, Auth) {
-  $scope.vote = {};
+  $scope.vote = {
+    public_vote: false
+  };
   $scope.confirm_vote = function(party) {
     $scope.show_confirmation = true;
     $scope.vote.party = party;
@@ -13,10 +15,20 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
       if(user === null) {
         $scope.login_required = true;
         $scope.$on("$firebaseSimpleLogin:login", function(e, user) {
-          console.log("User " + user.uid + " successfully logged in!");
+          $scope.set_vote = Vote.set({
+            party: $scope.vote.party,
+            visible: $scope.vote.public_vote
+          }, function() {
+            $state.transitionTo('application.results');
+          });
         });
       } else {
-        $scope.set_vote = Vote.set({});
+        $scope.set_vote = Vote.set({
+          party: $scope.vote.party,
+          visible: $scope.vote.public_vote
+        }, function() {
+          alert('votou');
+        });
       }
     });
   }
@@ -30,7 +42,7 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
   }
 
   $scope.cancel_vote = function() {
-    $scope.vote = {};
+    $scope.vote = {public_vote: false};
     $scope.show_confirmation = false;
   }
 });

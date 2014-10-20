@@ -10,12 +10,15 @@ angular.module('UrnaWeb').factory('Vote', function(FIREBASE_URL, $q, $firebaseSi
     }
 
   var Vote = {
-    set: function (vote_hash) {
+    set: function (vote_hash, callback) {
       get_auth_payload().then(function (payload) {
         firebaseReference.child('votes').child(payload.uid).set({
           party: vote_hash.party,
           visible: vote_hash.visible
-        });
+        })
+        if(callback) {
+          callback();
+        }
       });
     }
   };
