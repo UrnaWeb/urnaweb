@@ -80,6 +80,7 @@
     width: 38rem;
     max-width: 90%;
     height: 50rem;
+    overflow-y: auto;
     max-height: 96%;
     display: block;
     background-color: #FFF;
@@ -102,13 +103,39 @@
       font-size: 1.4rem;
       text-align: center;
       color: #888;
-      // font-family: $defaultFontFamily;
       text-transform: none;
-      font-weight: 700;
     }
 
-    .confirmation-subtitle {
+    .confirmation-actions {
+      width: 100%;
 
+      .check-public-vote {
+        width: 100%;
+        padding: 0 5%;
+        float: left;
+        line-height: 2rem;
+        text-align: center;
+        cursor: pointer;
+
+        .label-text {
+          display: inline-block;
+          padding: 0;
+          margin: 0 2rem 0 0;
+          color: rgba(104, 173, 94, 1.0);
+        }
+      }
+
+      .action {
+        float: left;
+        width: 50%;
+        padding: 4%;
+
+        .button {
+          font-size: 1.8rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
     }
 
   }
@@ -118,17 +145,17 @@
   .vote-candidate {
     padding: 2rem;
     .candidate-images {
-      width: 10rem;
+      width: 12rem;
     }
     .candidate-name {
       margin-top: 2rem;
       font-size: 2.4rem;
-      line-height: 3rem;
+      line-height: 3.2rem;
     }
     .candidate-party {
       margin-top: 0;
-      font-size: 1.2rem;
-      padding: 0 1rem;
+      font-size: 1.3rem;
+      padding: 0 0.5rem;
     }
 
     &.pt {
@@ -136,16 +163,16 @@
         box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem #F22613;
       }
       .candidate-illustration {
-        right: -1rem;
+        right: -0.5rem;
       }
     }
 
     &.psdb {
       .candidate-photo {
-        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.9rem #446CB3;
+        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem #446CB3;
       }
       .candidate-illustration {
-        right: -1rem;
+        right: -0.5rem;
       }
     }
   }

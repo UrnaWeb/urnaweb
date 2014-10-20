@@ -7,4 +7,13 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
     $scope.vote.party = party;
   }
   $scope.set_vote = Vote.set;
+
+  $scope.submit_vote = function() {
+    $scope.set_vote = Vote.set({});
+  }
+
+  $scope.cancel_vote = function() {
+    $scope.vote = {};
+    $scope.show_confirmation = false;
+  }
 });

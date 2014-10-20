@@ -13,7 +13,7 @@
     </div>
     <div class="candidate-option" id="candidate-psdb">
       <div ng-include="'templates/application/partials/candidates/psdb.html'"></div>
-      <button ng-click="confirm_vote('pt')" class="button vote">
+      <button ng-click="confirm_vote('psdb')" class="button vote">
         Votar
       </button>
     </div>
@@ -36,19 +36,24 @@
       </h2>
     </hgroup>
     <div ng-include="'templates/application/partials/candidates/' + vote.party + '.html'" id="confirmation-candidate-info"></div>
+
+    <div class="confirmation-actions">
+      <label for="public_vote" class="check-public-vote">
+        <p class="label-text">
+          Quero meu voto privado
+        </p>
+        <input type="checkbox" name="public_vote" ng-model="vote.public_vote" id="public_vote">
+      </label>
+      <div class="action">
+        <button class="button" ng-click="submit_vote()">
+          Sim
+        </button>
+      </div>
+      <div class="action">
+        <button class="button" ng-click="cancel_vote()">
+          Não
+        </button>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- <button ng-click="vote('13')">Votar Dilma</button>
-<button ng-click="vote('45')">Votar Aécio</button>
-<button ng-click="vote('none')">Branco / Nulo</button>
-<input type="radio" ng-model="vote_data.party" value="45">Aécio<br/>
-<input type="radio" ng-model="vote_data.party" value="13">Dilma<br/>
-<input type="radio" ng-model="vote_data.party" value="none">Branco/Nulo<br/>
-{{vote_data.party}}
-
-<input type="radio" ng-model="vote_data.visible" value="true">Visivel<br/>
-<input type="radio" ng-model="vote_data.visible" value="false">Não visivel<br/>
-{{vote_data.visible}}
-
-<button class="button" ng-click="set_vote({party: vote_data.party, visible: vote_data.visible })">Votar</button> -->
