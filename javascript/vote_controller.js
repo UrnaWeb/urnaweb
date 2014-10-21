@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('UrnaWeb').controller('VoteController', function($scope, $state, Vote, User, Auth, totalVotes) {
+  User.get_auth_payload().then(function(user) {
+    if(user === null) {
+      $scope.login_required = true;
+    }
+  });
   $scope.vote = {
     is_private: false
   };
@@ -11,19 +16,13 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
   $scope.set_vote = Vote.set;
 
   $scope.submit_vote = function() {
-    User.get_auth_payload().then(function(user) {
-      if(user === null) {
-        $scope.login_required = true;
-      } else {
-        $scope.set_vote = Vote.set({
-          party: $scope.vote.party,
-          is_private: $scope.vote.is_private
-        }, function() {
-          $scope.vote_confirmed = true;
-          var audio = new Audio('urna.mp3');
-          audio.play();
-        });
-      }
+    $scope.set_vote = Vote.set({
+      party: $scope.vote.party,
+      is_private: $scope.vote.is_private
+    }, function() {
+      $scope.vote_confirmed = true;
+      var audio = new Audio('urna.mp3');
+      audio.play();
     });
   }
 
