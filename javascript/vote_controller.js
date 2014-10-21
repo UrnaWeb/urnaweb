@@ -48,10 +48,7 @@ angular.module('UrnaWeb').controller('VoteController', function($scope, $state, 
     $scope.show_confirmation = false;
   }
 
-  // $scope.total_votes = totalVotes;
   Vote.total().then(function(something){
     $scope.total_votes = something;
-    console.log(something);
   });
-  // console.log(totalVotes);
 });
