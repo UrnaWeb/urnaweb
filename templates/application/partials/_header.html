@@ -1,3 +1,14 @@
 <div id="vote-count" ng-click="logout();">
   contagem de votos: &nbsp; <em>{{total_votes.total}}</em>
 </div>
+
+<nav id="header-menu" ng-hide="hide_menu">
+  <ul id="menu-items">
+    <li class="item" ui-sref="application.about">
+      Sobre
+    </li>
+    <li class="item" ng-click="login();">
+      Login
+    </li>
+  </ul>
+</nav>
