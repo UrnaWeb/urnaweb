@@ -3,26 +3,27 @@
 @import "bourbon";
 @import "neat";
 
-@import "variables/grid";
-@import "variables/colors";
-@import "variables/dimensions";
-@import "variables/others";
+@import "variables/_grid";
+@import "variables/_colors";
+@import "variables/_dimensions";
+@import "variables/_others";
 
-@import "helpers/layout_helper";
-@import "helpers/vertical_align";
-@import "helpers/horizontal_align";
-@import "helpers/center_align";
+@import "helpers/_layout_helper";
+@import "helpers/_vertical_align";
+@import "helpers/_horizontal_align";
+@import "helpers/_center_align";
 
-@import "components/paragraphs";
-@import "components/headings";
-@import "components/buttons";
-@import "components/inputs";
+@import "components/_paragraphs";
+@import "components/_headings";
+@import "components/_buttons";
+@import "components/_inputs";
 
-@import "modules/header";
-@import "modules/footer";
-@import "modules/vote-candidate";
-@import "modules/centered-page-title";
+@import "modules/_header";
+@import "modules/_footer";
+@import "modules/_vote-candidate";
+@import "modules/_centered-page-title";
 
-@import "pages/application/show";
-@import "pages/application/home/show";
-@import "pages/application/vote/show";
+@import "pages/application/_show";
+@import "pages/application/home/_show";
+@import "pages/application/vote/_show";
+@import "pages/application/results/_show";

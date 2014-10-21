@@ -12,10 +12,7 @@ angular.module('UrnaWeb').factory('Vote', function(FIREBASE_URL, $q, $firebase, 
   var Vote = {
     set: function (vote_hash, callback) {
       get_auth_payload().then(function (payload) {
-        firebaseReference.child('votes').child(payload.uid).set({
-          "party": vote_hash.party,
-          "is_private": vote_hash.is_private
-        })
+        firebaseReference.child('votes').child(vote_hash.party).child(payload.uid).set(vote_hash.is_private);
         if(callback) {
           callback();
         }

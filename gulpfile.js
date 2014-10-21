@@ -46,7 +46,7 @@ gulp.task('reload-js', function () {
     .pipe(connect.reload());
 });
 gulp.task('watch', function () {
-    gulp.watch(['./stylesheet/**/*.{less,scss}'],['build-sass']);
+    gulp.watch(['./stylesheet/**/*.scss'],['build-sass']);
     gulp.watch(['tmp/*.css'],['reload-css']);
     gulp.watch('javascript/**/*.js',['reload-js']);
     gulp.watch(['index.html','templates/**/*.html'],['reload-html']);

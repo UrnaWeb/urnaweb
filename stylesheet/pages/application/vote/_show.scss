@@ -79,7 +79,6 @@
     border-radius: 1rem;
     width: 38rem;
     max-width: 90%;
-    height: 50rem;
     overflow-y: auto;
     max-height: 96%;
     display: block;
@@ -156,6 +155,44 @@
       }
     }
 
+    .confirmation-success {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 20;
+      display: block;
+      text-align: center;
+
+      .confirmation-success-background {
+        @extend %center-align;
+        height: 100%;
+        width: 100%;
+        display: block;
+        background-color: $successColor;
+        border-radius: 1rem;
+      }
+      .success-content {
+        @extend %vertical-align;
+        width: 100%;
+        color: #FFF;
+
+        .success-title {
+          color: inherit;
+          font-size: 2.4rem;
+          padding: 4rem 0;
+        }
+
+        .success-message {
+          font-size: 1.8rem;
+          font-family: $defaultFontFamily;
+          color: #FFF;
+          padding: 4rem;
+        }
+      }
+    }
+
   }
 }
 
@@ -178,7 +215,7 @@
 
     &.pt {
       .candidate-photo {
-        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem #F22613;
+        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem $ptColor;
       }
       .candidate-illustration {
         right: -0.5rem;
@@ -187,7 +224,7 @@
 
     &.psdb {
       .candidate-photo {
-        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem #446CB3;
+        box-shadow: 0 0 0 0.4rem #FFF, 0 0 0 0.5rem $psdbColor;
       }
       .candidate-illustration {
         right: -0.5rem;

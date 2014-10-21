@@ -1,19 +1,21 @@
 .centered-page-title {
   @extend .application-row;
-  line-height: 3rem;
   text-align: center;
-  padding: 2rem 0.5rem;
   box-shadow: inset 0 -1px 0 0 #CCC;
 
-  @media screen and (max-width: 420px) {
-    padding: 1rem 0;
+  .page-title {
+    line-height: 4rem;
+    padding: 1rem;
+    @media screen and (max-width: 420px) {
+      font-size: 3rem;
+      line-height: 4rem;
+      padding: 0;
+    }
   }
 
-  h1 {
-    font-size: 3rem;
-
-    @media screen and (max-width: 420px) {
-      font-size: 1.6rem;
-    }
+  .page-subtitle {
+    color: #888;
+    font-size: 1.2rem;
+    padding: 0 1rem 1rem 1rem;
   }
 }

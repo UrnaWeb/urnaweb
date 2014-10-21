@@ -30,4 +30,14 @@ angular.module('UrnaWeb', ['firebase','ngCookies','ngResource','ngSanitize','ngA
         controller: 'VoteController',
         templateUrl: 'templates/application/vote/show.html'
       })
+      .state('application.results', {
+        url: '/resultados',
+        resolve: {
+          totalVotes: function(Vote) {
+            return Vote.total();
+          }
+        },
+        controller: 'ResultsController',
+        templateUrl: 'templates/application/results/show.html'
+      })
 })

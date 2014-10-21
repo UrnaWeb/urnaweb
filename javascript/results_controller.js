@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('UrnaWeb').controller('VoteController', function($scope, $state, Vote, User, Auth, totalVotes) {
+angular.module('UrnaWeb').controller('ResultsController', function($scope, $state, Vote, User, Auth, totalVotes) {
   $scope.vote = {
     is_private: false
   };
