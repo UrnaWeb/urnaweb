@@ -86,41 +86,53 @@
     box-shadow: 0 0 5rem 0 rgba(0,0,0,0.5);
     @extend %center-align;
 
-    .confirmation-title {
-      width: 100%;
-      line-height: 2.4rem;
-      padding: 1rem 2rem;
-      font-size: 1.8rem;
+    #cancel-vote {
+      position: fixed;
+      top: 0.5rem;
+      right: 0.5rem;
+      height: 2rem;
+      line-height: 2rem;
+      width: 2rem;
+      border-radius: 2rem;
+      background-color: $featuredPrimaryColor;
+      color: #FFF;
       text-align: center;
-      box-shadow: 0 1px 0 0 #CCC;
+      font-weight: 700;
+      font-size: 1.4rem;
+      cursor: pointer;
     }
 
-    .confirmation-subtitle {
+    .confirmation-title {
       width: 100%;
-      line-height: 1.8rem;
-      padding: 1rem 2rem;
-      font-size: 1.4rem;
+      line-height: 3rem;
+      padding: 2rem;
+      font-size: 1.8rem;
       text-align: center;
-      color: #888;
-      text-transform: none;
     }
 
     .confirmation-actions {
       width: 100%;
 
       .check-public-vote {
-        width: 100%;
-        padding: 0 5%;
+        width: 90%;
+        margin: 0 5%;
+        padding: 0 2rem;
         float: left;
-        line-height: 2rem;
+        line-height: 5rem;
         text-align: center;
         cursor: pointer;
+        border-radius: 4rem;
+        box-shadow: 0 0 0 1px $strongerPrimaryColor;
 
         .label-text {
           display: inline-block;
           padding: 0;
-          margin: 0 2rem 0 0;
+          margin: 0 5rem 0 0;
           color: rgba(104, 173, 94, 1.0);
+          vertical-align: middle;
+          font-size: 1.8rem;
+          font-family: $featuredFontFamily;
+          color: $strongerPrimaryColor;
         }
       }
 

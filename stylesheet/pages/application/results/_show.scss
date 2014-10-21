@@ -92,3 +92,31 @@
     }
   }
 }
+
+.results-notify {
+  width: 100%;
+  float: left;
+  text-align: center;
+  color: #888;
+  font-family: $featuredFontFamily;
+  font-size: 1.8rem;
+  padding: 2rem 0 4rem 0;
+}
+
+#results-actions {
+  float: left;
+  width: 100%;
+  text-align: center;
+
+  .button,
+  .facebook-button {
+    margin: 1rem;
+    max-width: 90%;
+  }
+}
+
+#likebox {
+  width: 80rem;
+  max-width: 80%;
+  margin: 2rem;
+}

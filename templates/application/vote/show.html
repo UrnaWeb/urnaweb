@@ -1,7 +1,7 @@
 <section>
   <header class="centered-page-title">
-    <h1>
-      {{total_votes.total}} Em quem você pretende votar?
+    <h1 class="page-title">
+      Em quem você pretende votar?
     </h1>
   </header>
   <article class="candidate-options">
@@ -27,15 +27,15 @@
 
 <section id="vote-confirmation" ng-show="show_confirmation">
   <div id="confirmation-content">
-    <hgroup ng-click="logout()">
+    <span id="cancel-vote" ng-click="cancel_vote()">
+      x
+    </span>
+    <hgroup>
       <h1 class="confirmation-title">
-        Confirmação de voto
+        Confirme seu voto em:
       </h1>
-      <h2 class="confirmation-subtitle">
-        Deseja realmente votar em:
-      </h2>
     </hgroup>
-    <div ng-include="'templates/application/partials/candidates/' + vote.party + '.html'" id="confirmation-candidate-info"></div>
+    <div ng-include="'templates/application/partials/candidates/' + vote.party + '_confirm.html'" id="confirmation-candidate-info"></div>
 
     <div class="confirmation-actions">
       <label for="is_private" class="check-public-vote">
@@ -44,32 +44,12 @@
         </p>
         <input type="checkbox" name="is_private" ng-model="vote.is_private" id="is_private">
       </label>
-      <div class="action">
-        <button class="button" ng-click="submit_vote()">
-          Sim
-        </button>
-      </div>
-      <div class="action">
-        <button class="button" ng-click="cancel_vote()">
-          Não
-        </button>
-      </div>
-    </div>
-
-    <div class="facebook-login" ng-show="login_required">
-      <div class="login-content">
-        <h2 class="login-title">
-          Concluir
-        </h2>
-        <p class="login-message">
-          Para registrar seu voto você precisa entrar com sua conta do Facebook.
-
-          Não se preocupe, as informações são usadas apenas para garantir que cada pessoa é elegível a voto e vota uma única vez.
-        </p>
-        <button class="facebook-button" ng-click="login()">
-          Entrar com facebook
-        </button>
-      </div>
+      <button class="facebook-button" ng-click="login()" ng-show="login_required">
+        Entrar com facebook
+      </button>
+      <button class="button" ng-click="submit_vote()" ng-hide="login_required">
+        Confirmar voto
+      </button>
     </div>
 
     <div class="confirmation-success" ng-show="vote_confirmed">

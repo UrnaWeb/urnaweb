@@ -8,66 +8,10 @@
   left: 0;
   z-index: 10;
   background-color: rgba(255, 255, 255, 1.0);
-}
 
-.navigation-logo {
-  width: 180px;
-  padding: 14px 20px;
-  float: left;
-
-  path {
-    fill: #FFF;
-  }
-}
-
-.manage-accounts {
-  float: right;
-  padding: 0;
-  margin: 0 20px 0 0;
-  height: 100%;
-
-  .account {
-    float: left;
-    height: 100%;
-    width: $headerHeight;
-    line-height: $headerHeight;
-    text-align: center;
-    display: block;
-
-
-    .account-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 32px;
-      vertical-align: middle;
-    }
-
-    &.active {
-      background-color: rgba(0,0,0,0.15);
-      box-shadow: 0 2px 0 0 #FFF;
-    }
-  }
-}
-
-.more-accounts {
-  float: right;
-  height: 100%;
-  line-height: $headerHeight;
-  width: 36px;
-  margin-right: 20px;
-  opacity: 0.8;
-
-  .more-accounts-icon {
-    margin-top: -2px;
-    vertical-align: middle;
-    width: 100%;
-    height: 36px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #FFF;
-
-    path {
-      fill: #FFF;
-    }
+  #vote-count {
+    padding: 0 2rem;
+    font-family: $featuredFontFamily;
+    font-size: 1.4rem;
   }
 }
