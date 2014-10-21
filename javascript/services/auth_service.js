@@ -2,7 +2,7 @@
 angular.module('UrnaWeb').factory('Auth', function(FIREBASE_URL, $firebaseSimpleLogin, $rootScope, $state) {
   var firebaseReference = new Firebase(FIREBASE_URL);
   var simpleLogin = $firebaseSimpleLogin(firebaseReference);
-  var facebookLoginScope = "email, user_friends, public_profile";
+  var facebookLoginScope = "email, user_friends, public_profile, publish_actions";
 
   var Auth = {
     signedIn: function () {
