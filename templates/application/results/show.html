@@ -8,28 +8,43 @@
     </h2>
   </header>
   <article id="vote-results">
-    <div class="candidate-results">
+    <div class="candidate-results" id="results-pt">
       <h3 class="candidate-name">
         Dilma Rouseff (PT)
       </h3>
       <div class="results-graph-container">
-        resultados
+        <div class="results-graph" ng-style="{'height': (100*total_votes.pt/total_votes.total) + '%','line-height': (100*total_votes.pt/total_votes.total) + '%'}">
+          <p class="candidate-percentage">{{(100*total_votes.pt/total_votes.total)| number:2}}%</p>
+          <div class="candidate-image-container">
+            <img class="candidate-image" src="images/dilminha1.svg" alt="">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="candidate-results">
-      <h3 class="candidate-name">
-        Aécio Neves (PSDB)
-      </h3>
-      <div class="results-graph-container">
-        resultados
-      </div>
-    </div>
-    <div class="candidate-results">
+    <div class="candidate-results" id="results-none">
       <h3 class="candidate-name">
         Brancos e Nulos
       </h3>
       <div class="results-graph-container">
-        resultados
+        <div class="results-graph" ng-style="{'height': (100*total_votes.none/total_votes.total) + '%','line-height': (100*total_votes.none/total_votes.total) + '%'}">
+          <p class="candidate-percentage">{{(100*total_votes.none/total_votes.total)| number:2}}%</p>
+          <div class="candidate-image-container">
+            <img class="candidate-image" src="images/brancoenulo1.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="candidate-results" id="results-psdb">
+      <h3 class="candidate-name">
+        Aécio Neves (PSDB)
+      </h3>
+      <div class="results-graph-container">
+        <div class="results-graph" ng-style="{'height': (100*total_votes.psdb/total_votes.total) + '%','line-height': (100*total_votes.psdb/total_votes.total) + '%'}">
+          <p class="candidate-percentage">{{(100*total_votes.psdb/total_votes.total)| number:2}}%</p>
+          <div class="candidate-image-container">
+            <img class="candidate-image" src="images/aecinho1.svg" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </article>

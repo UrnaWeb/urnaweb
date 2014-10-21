@@ -1,5 +1,6 @@
 #vote-results {
   @extend .application-row;
+  box-shadow: 0 1px 0 0 #CCC;
 
   .candidate-results {
     float: left;
@@ -11,23 +12,79 @@
       float: left;
       width: 100%;
       text-align: center;
-      padding: 1rem;
+      padding: 1.4rem;
       color: #444;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      box-shadow: 0 1px 0 0 #CCC;
 
       @media screen and (max-width: 420px) {
         font-size: 1rem;
-        // line-height: 4rem;
-        // padding: 0;
       }
     }
 
     .results-graph-container {
       width: 100%;
-      height: 30rem;
+      height: 40rem;
       display: block;
+      margin-top: 5rem;
+      position: relative;
+      float: left;
+      overflow: hidden;
+
+      @media screen and (max-height: 768px) {
+        height: 18rem;
+      }
+
+      .results-graph {
+        @extend %horizontal-align;
+        @include transition (height 1.0s ease-out 0.5s);
+        width: 24rem;
+        max-width: 80%;
+        bottom: 0;
+
+        .candidate-image-container {
+          @extend %horizontal-align;
+          width: 10rem;
+          max-width: 60%;
+          top: -8rem;
+
+          @media screen and (max-height: 768px) {
+            top: -4.8rem;
+          }
+
+          .candidate-image {
+            width: 100%;
+          }
+        }
+
+        .candidate-percentage {
+          color: rgba(255, 255, 255, 1.0);
+          font-size: 2.4rem;
+          font-family: $featuredFontFamily;
+
+          @media screen and (max-width: 420px) {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    &#results-pt {
+      .results-graph {
+        background-color: $ptColor;
+      }
+    }
+    &#results-psdb {
+      .results-graph {
+        background-color: $psdbColor;
+      }
+    }
+    &#results-none {
+      .results-graph {
+        background-color: $noneColor;
+      }
     }
 
     &:first-child {
