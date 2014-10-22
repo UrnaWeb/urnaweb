@@ -1,12 +1,14 @@
 'use strict';
-angular.module('UrnaWeb').factory('Auth', function(FIREBASE_URL, $firebaseSimpleLogin, $rootScope, $state) {
+angular.module('UrnaWeb').factory('Auth', function(FIREBASE_URL, $q, $firebaseSimpleLogin, $rootScope, $state) {
   var firebaseReference = new Firebase(FIREBASE_URL);
   var simpleLogin = $firebaseSimpleLogin(firebaseReference);
   var facebookLoginScope = "email, user_friends, public_profile, publish_actions";
 
   var Auth = {
-    signedIn: function () {
-      return simpleLogin.user !== null;
+    get_auth_payload: function () {
+      var deferred = $q.defer();
+      simpleLogin.$getCurrentUser().then(deferred.resolve, deferred.reject);
+      return deferred.promise;
     },
     login: function (callback) {
       simpleLogin.$login("facebook", {scope: facebookLoginScope}).then(function(userData) {
