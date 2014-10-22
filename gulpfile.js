@@ -13,6 +13,7 @@ var gulp        = require('gulp'),
     connect     = require('gulp-connect'),
     changed     = require('gulp-changed'),
     imagemin    = require('gulp-imagemin'),
+    clean       = require('gulp-clean'),
     jsonminify  = require('gulp-jsonminify');
 
 gulp.task('build-sass', function() {
@@ -55,8 +56,12 @@ gulp.task('watch', function () {
 // =====================================================================================
 //  Production related tasks
 // =====================================================================================
+gulp.task('move', function(){
+  gulp.src(['./images/*.svg','./urna.mp3'], { base: './' })
+  .pipe(gulp.dest('dist'));
+});
 gulp.task('image-compress', function() {
-  return gulp.src(['./images/*','./images/**/*'])
+  return gulp.src(['./images/*.png','./images/*.jpg','./images/*.jpeg','./images/*.gif'])
       .pipe(changed('./dist/images'))
       .pipe(imagemin())
       .pipe(gulp.dest('./dist/images'))
@@ -84,5 +89,9 @@ gulp.task('usemin', function() {
 // =====================================================================================
 //  Main tasks registration
 // =====================================================================================
+gulp.task('clean', function(){
+  return gulp.src(['dist/*'], {read:false})
+  .pipe(clean());
+});
 gulp.task('default', ['connect','watch']);
-gulp.task('build', ['build-sass','image-compress','build-json','build-html','usemin']);
+gulp.task('build', ['build-sass','move','image-compress','build-json','build-html','usemin']);
