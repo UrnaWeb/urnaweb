@@ -1,11 +1,9 @@
 'use strict';
-var FIREBASE_URL_STRING = process.env.FIREBASE_KEY || 'https://urnaweb.firebaseio.com/';
-
 angular.module('UrnaWeb', ['firebase','ngCookies','ngResource','ngSanitize','ngAnimate','ui.router'])
 // Makes Lo-dash / Underscore avaiable at constant level
 .constant('_', window._)
 .constant('ga', window.ga)
-.constant('FIREBASE_URL', FIREBASE_URL_STRING)
+.constant('FIREBASE_URL', 'https://urnaweb.firebaseio.com/')
 // Angular app configuration
 .config(function($httpProvider, $stateProvider, $urlRouterProvider,$locationProvider) {
   $httpProvider.defaults.headers.common['X-Requested-With'];
